@@ -129,7 +129,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 ```shell
 sudo pacman -S xorg plasma
 systemctl enable sddm
-sudo pacman -S alacritty thunar ark
+sudo pacman -S konsole thunar ark fastfetch
 ```
 ```shell
 exit
@@ -137,7 +137,7 @@ reboot
 ```
 ## 17. 进入桌面安装中文字体
 ```shell
-grub-mkconfig -o /boot/grub/grub.cfg
+sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 ```shell
 sudo pacman -S adobe-source-han-sans-cn-fonts
