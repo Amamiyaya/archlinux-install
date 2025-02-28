@@ -2,6 +2,7 @@
 
 **<big><big>参考了并整理了[大佬的视频教程](https://www.bilibili.com/video/BV1fk4y1w7wq/?spm_id_from=333.880.my_history.page.click&vd_source=3c09440c76698200a2fd30438ed4eeaf)</big></big>**
 
+<big>**关于如何进BIOS就不说了，先利用Ventoy在U盘里烧录archlinux的iso镜像文件，然后进Boot Menu，选择从U盘启动系统就行了。。。**</big>
 ## 1. 分盘并挂载
 
 ```shell
@@ -201,3 +202,14 @@ reboot
 ```
 
 **完结撒花~**
+
+## 关于ping百度无法解析域名的网络问题
+### 配置DNS：
+```shell
+sudo vim /etc/resolv.conf
+改为：
+nameserver 8.8.8.8
+然后加锁：
+sudo chattr +i /etc/resolv.conf
+reboot
+```
