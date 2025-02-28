@@ -55,7 +55,7 @@ sudo pacman-key --populate archlinux
 sudo pacman -S archlinux-keyring
 ```
 ## 4. 安装软件包
-**<big>根据cpu型号选择Intel-ucode和amd-ucode。zen代表高性能内核，lts代表长期支持稳定版</big>**
+**<big>根据cpu型号选择intel-ucode和amd-ucode。zen代表高性能内核，lts代表长期支持稳定版</big>**
 ```shell
 sudo pacstrap /mnt base base-devel linux-zen linux-zen-headers linux-firmware networkmanager grub os-prober efibootmgr ntfs-3g intel-ucode bluez bluez-utils
 ```
