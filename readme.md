@@ -44,6 +44,10 @@ sudo vim etc/pacman.d/mirrorlist
 
 <big>**在第一行添加Server = https:/mirrors.tuna.tsinghua.edu.cn/archlinux/\$repo/os/$arch(清华源)，保存退出**</big>	
 
+<big>**也可通过如下命令换源：**</big>
+```shell
+reflector --verbose --country 'China' -l 200 -p https --sort rate --save /etc/pacman.d/mirrorlist
+```
 ```shell
 sudo pacman -Syy
 ```
@@ -57,11 +61,11 @@ sudo pacman -S archlinux-keyring
 ## 4. 安装软件包
 **<big>根据cpu型号选择intel-ucode和amd-ucode。zen代表高性能内核，lts代表长期支持稳定版</big>**
 ```shell
-sudo pacstrap /mnt base base-devel linux-zen linux-zen-headers linux-firmware networkmanager grub os-prober efibootmgr ntfs-3g intel-ucode bluez bluez-utils
+sudo pacstrap /mnt base base-devel linux-zen linux-zen-headers linux-firmware networkmanager grub os-prober efibootmgr ntfs-3g intel-ucode bluez bluez-utils nano vim
 ```
 ## 5. 创建fstab (自动挂载配置文件)
 ```shell
-genfstab -U /mnt >> mnt/etc/fstab
+genfstab -U /mnt >> /mnt/etc/fstab
 ```
 ## 6. chroot进入系统
 ```shell
@@ -117,7 +121,6 @@ sudo vim /etc/default/grub
 **<big>去掉GRUB_DISABLE_OS_PROBER=false前的#</big>**
 
 ## 15. 安装更新grub服务引导
-
 ```shell
 grub-install --target=x86_64-efi --efi-directory=/efi --bootloader-id=grub
 grub-mkconfig -o /boot/grub/grub.cfg
