@@ -1,6 +1,6 @@
 # archlinux安装步骤（自用）
 
-**<big><big>参考了[别人的教程](https://www.bilibili.com/video/BV1fk4y1w7wq/?spm_id_from=333.880.my_history.page.click&vd_source=3c09440c76698200a2fd30438ed4eeaf)</big></big>**
+**<big><big>参考了并整理了[大佬的视频教程](https://www.bilibili.com/video/BV1fk4y1w7wq/?spm_id_from=333.880.my_history.page.click&vd_source=3c09440c76698200a2fd30438ed4eeaf)</big></big>**
 
 ## 1. 分盘并挂载
 
