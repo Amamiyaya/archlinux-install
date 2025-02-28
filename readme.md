@@ -42,20 +42,20 @@ mount --mkdir /dev/sdb4 /mnt/efi
 sudo vim etc/pacman.d/mirrorlist
 ```
 
-<big>**在第一行添加Server : https:/mirrors.tuna.tsinghua.edu.cn/archlinux/\$repo/os/$arch(清华源)，保存退出**</big>	
+<big>**在第一行添加Server = https:/mirrors.tuna.tsinghua.edu.cn/archlinux/\$repo/os/$arch(清华源)，保存退出**</big>	
 
 ```shell
-sudo pacman -Syu
 sudo pacman -Syy
 ```
 
 ## 3. 重新安装密钥
 ```shell
-sudo pacman -S archlinux-keyring
 sudo pacman-key --init
 sudo pacman-key --populate archlinux
+sudo pacman -S archlinux-keyring
 ```
 ## 4. 安装软件包
+**<big>根据cpu型号选择Intel-ucode和amd-ucode。zen代表高性能内核，lts代表长期支持稳定版</big>**
 ```shell
 sudo pacstrap /mnt base base-devel linux-zen linux-zen-headers linux-firmware networkmanager grub os-prober efibootmgr ntfs-3g intel-ucode bluez bluez-utils
 ```
