@@ -172,7 +172,7 @@ sudo pacman -S archlinux-apstream-data packagekit-qt5 fwupd
 ```
 ```shell
 sudo pacman -S yay
-yay -Syy
+sudo yay -Syy
 ```
 ## 20. 安装中文输入法
 ```shell
