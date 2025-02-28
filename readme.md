@@ -42,9 +42,8 @@ mount --mkdir /dev/sdb4 /mnt/efi
 sudo vim etc/pacman.d/mirrorlist
 ```
 
-<big>**在第一行添加Server = https:/mirrors.tuna.tsinghua.edu.cn/archlinux/\$repo/os/$arch(清华源)，保存退出**</big>	
+<big>**在第一行添加Server = https:/mirrors.tuna.tsinghua.edu.cn/archlinux/\$repo/os/$arch(清华源)，保存退出。也可通过如下命令换源：**</big>	
 
-<big>**也可通过如下命令换源：**</big>
 ```shell
 reflector --verbose --country 'China' -l 200 -p https --sort rate --save /etc/pacman.d/mirrorlist
 ```
@@ -83,7 +82,7 @@ hwclock --systohc
 ```shell
 sudo vim /etc/locale.gen
 ```
-**<big>删除en_US.UTF-8 UTF-8和zh_CN.UTF-8 UTF-8前的#</big>**
+**<big>删除en_US.UTF-8 UTF-8和zh_CN.UTF-8 UTF-8前的#（用vim可直接搜索）</big>**
 
 ```shell
 locale-gen
