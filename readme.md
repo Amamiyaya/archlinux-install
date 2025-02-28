@@ -47,6 +47,7 @@ sudo vim etc/pacman.d/mirrorlist
 ```shell
 reflector --verbose --country 'China' -l 200 -p https --sort rate --save /etc/pacman.d/mirrorlist
 ```
+<big>**更新源：**</big>
 ```shell
 sudo pacman -Syy
 ```
