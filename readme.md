@@ -131,6 +131,7 @@ sudo pacman -S xorg plasma
 systemctl enable sddm
 sudo pacman -S konsole thunar ark fastfetch
 ```
+<big>**退出并重启系统：**</big>
 ```shell
 exit
 reboot
