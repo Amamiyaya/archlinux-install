@@ -40,7 +40,7 @@ mount --mkdir /dev/sdb4 /mnt/efi
 ## 2. 配置国内镜像源
 
 ```shell
-sudo vim etc/pacman.d/mirrorlist
+sudo vim /etc/pacman.d/mirrorlist
 ```
 
 <big>**在第一行添加Server = https:/mirrors.tuna.tsinghua.edu.cn/archlinux/\$repo/os/$arch(清华源)，保存退出。也可通过如下命令换源：**</big>	
